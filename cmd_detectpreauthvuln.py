@@ -13,16 +13,16 @@ import urlparse
 
 def printhelp():
     
-    print "Usage #1: ./cmd_detectpreauthvuln.py --hostfile=<DOMAINIDFILE>"
-    print "\t --idfile param: a file that holds list of hostnames / ipaddresses that the script will check"
+    print "Usage #1: ./cmd_detectpreauthvuln.py --hostfile=<HOSTSFILE>"
+    print "\t --hostfile param: a file that holds list of hostnames / ipaddresses that the script will check"
     
     exit(0)    
 
 def readfile(infile):
     
-    idfile = open(infile,"r")
+    hostfile = open(infile,"r")
     filedata=[]
-    for line in idfile.readlines():
+    for line in hostfile.readlines():
         filedata.append(line.rstrip())    
     return filedata
 
@@ -57,11 +57,11 @@ if __name__ == '__main__':
             exit(0)
     
     if '--hostfile=' in sys.argv[1]:
-        idfile = sys.argv[1].split("=")[1]
-        idfiledata = readfile(idfile)
+        hostfile = sys.argv[1].split("=")[1]
+        hostfiledata = readfile(hostfile)
 
 
-    for item in idfiledata:
+    for item in hostfiledata:
         url = "https://" + item + "/"
         print "[*] Testing " + url
         testVuln(url)
