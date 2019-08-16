@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #
-#
-#
+# Link to the slides from Orange:
+#   https://i.blackhat.com/USA-19/Wednesday/us-19-Tsai-Infiltrating-Corporate-Intranet-Like-NSA.pdf
 #
 import os 
 import re
