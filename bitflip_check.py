@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 
-YOLO Vibe coding \o/
+YOLO Vibe coding!
 
 bitsquat_generator.py
 
